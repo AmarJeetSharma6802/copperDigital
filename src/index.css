@@ -141,8 +141,26 @@ body {
 .h2-remove h2 {
   text-align: left;
 }
+.clearbtn-pricebtn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.btncart{
+  padding: 10px;
+  border-radius: 4px;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+}
 
 @media (max-width: 850px) {
+  .clearbtn-pricebtn{
+    flex-direction: column;
+    
+  }
   .img-details {
     max-width: 95vw;
     margin: 2rem auto;

@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { removeFromCart } from "./cartSlice";
+import { removeFromCart,clearCart } from "./cartSlice";
 import { useNavigate } from "react-router-dom";
 function Cart() {
     const navigate = useNavigate()
@@ -52,9 +52,13 @@ function Cart() {
                 </div>
                 
             ))}
-            <button>
+            <div className="clearbtn-pricebtn">
+
+            <button className="btncart">
               Total Price :₹{totalPrice ? totalPrice.toFixed(2) : "0.00"}
             </button>
+            <button className="clearCart btncart" onClick={() => dispatch(clearCart())} >Clear Cart</button>
+            </div>
           </>
         )}
       </div>
